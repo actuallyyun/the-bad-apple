@@ -2,6 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 
@@ -23,12 +24,7 @@ body {
 
 /* navbar */
 
-#globalnav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
+.globalnav {
     display: block;
     margin: 0;
     width: 100%;
@@ -39,17 +35,16 @@ body {
     font-size: 17px;
 }
 
-#globalnav .nav-content {
+.globalnav .nav-content {
     margin: 0 auto;
     max-width: 980px;
     padding: 0 22px;
     position: relative;
-    z-index: 2;
     padding-left: 22px;
     padding-right: 22px;
 }
 
-#globalnav .nav-content>ul {
+.globalnav .nav-content>ul {
     margin: 0 -8px;
     width: auto;
     height: 44px;
@@ -58,23 +53,21 @@ body {
 
 }
 
-#globalnav .nav-content>ul>li {
+.globalnav .nav-content>ul>li {
     box-sizing: border-box;
     display: inline-block;
     position: relative;
     height: 44px;
-    z-index: 1;
     vertical-align: top;
 }
 
-#globalnav .nav-content>ul>li>a {
+.globalnav .nav-content>ul>li>a {
     font-size: 12px;
     line-height: 3.66667;
     font-weight: 400;
     letter-spacing: -.01em;
     color: #f5f5f7;
     position: relative;
-    z-index: 1;
     display: inline-block;
     padding: 0 8px;
     height: 44px;
@@ -83,7 +76,7 @@ body {
     white-space: nowrap;
 }
 
-#nav-apple {
+.nav-content-apple {
     background-size: 14px 44px;
     background-repeat: no-repeat;
     background-image: url("images/Apple_logo_grey.svg");
@@ -101,7 +94,7 @@ body {
     top: 50%;
 }
 
-#nav-search>a {
+.nav-search>a {
     background-position: 8px 0;
     background-size: 15px 88px;
     background-repeat: no-repeat;
@@ -111,11 +104,242 @@ body {
 
 }
 
-#nav-bag>a {
+.nav-bag>a {
     background-size: 13px 44px;
     background-repeat: no-repeat;
     background-image: url("https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg");
     background-position: center center;
     width: 13px;
     opacity: 1;
+}
+
+@media screen and (max-width:833px) {
+    .globalnav {
+        display: block;
+        top: 3.52941em;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-width: 664px;
+        margin: 0 auto;
+        padding: 45px 40px 8px;
+        height: auto;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(2) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(3) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(4) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(5) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(6) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(7) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(8) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(9) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(10) {
+        display: none;
+    }
+
+    .globalnav .nav-content>ul>li:nth-child(11) {
+        display: none;
+    }
+}
+
+@media screen and (max-width:)
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.logo-image-unicef {
+    width: 122px;
+    height: 32px;
+    background-size: 122px 32px;
+    background-repeat: no-repeat;
+    background-image: url("https://www.apple.com/v/home/aq/images/logos/unicef-relief-fund/unicef_logo_dark__ejvlglygb3ee_large_2x.png");
+
+}
+
+.banner-text-unicef {
+    text-decoration: none;
+    color: #06c;
+    display: inline-flex;
+    align-items: center;
+}
+
+.banner-text-unicef::after {
+    content: "↗︎";
+    padding-left: 0.3em;
+    display: inline;
+    line-height: 1;
+    font-size: 0.8em;
+
+}
+
+@media screen and (max-width:734px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-text-unicef {
+        max-width: 215px;
+        margin-top: 4px;
+    }
+
+}
+
+/* Content Section */
+
+.unit-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #fbfbfd;
+    width: 100%;
+}
+
+.unit-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.unit-content-wrapper>h2 {
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -.005em;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 1;
+
+}
+
+.unit-content-wrapper>h3 {
+    margin-top: 10px;
+    font-size: 28px;
+    line-height: 1.10722;
+    font-weight: 400;
+    letter-spacing: 0.004em;
+    color: #1d1d1f;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 1;
+}
+
+.sub-headline {
+    background-image: url("images/logo_hero_macbookair__edl9uovq56wm_largetall_2x.png");
+    width: 500px;
+    height: 90px;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.btn {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 1.176;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    min-width: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 980px;
+    background: #0071e3;
+    color: #fff;
+}
+
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links {
+    text-decoration: none;
+    color: #06c;
+    margin-left: 2em;
+    margin-top: 6px;
+
+}
+
+.links::after {
+    content: ">";
+    font-size: 1em;
+    color: #06c;
+    padding-left: 7px;
+}
+
+.unit-image-wrapper {
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.unit-image {
+    background-image: url("images/macbook_air_m2__r1jrymq4ftea_medium_2x.jpeg");
+    width: 700px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+
+@media section and (max-width:1068) {
+    .unit-content-wrapper {
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 692px;
+
+
+    }
+}
+
+@media screen and (max-width:730px) {
+    .unit-content-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 86%;
+
+    }
 }
